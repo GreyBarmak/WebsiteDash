@@ -22,8 +22,20 @@
         .header {
             background: #450084;
             color: white;
-            padding: 30px 20px;
+            padding: 40px 20px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700 0%, transparent 100%);
         }
 
         .header-content {
@@ -33,24 +45,43 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
 
         .logo {
-            font-size: 2em;
-            font-weight: bold;
-            letter-spacing: 2px;
+            font-size: 2.2em;
+            font-weight: 800;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .logo-accent {
             color: #FFD700;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            font-size: 1.2em;
+        }
+
+        .tagline {
+            font-size: 0.95em;
+            color: #FFD700;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         .contact-info {
             display: flex;
             gap: 20px;
-            flex-wrap: wrap;
-            font-size: 0.9em;
+            flex-wrap: nowrap;
+            font-size: 1.2em;
+            align-items: center;
         }
 
         .contact-info a {
@@ -539,8 +570,13 @@
     <!-- Header -->
     <div class="header">
         <div class="header-content">
-            <div class="logo">
-                <span class="logo-accent">G</span>CB
+            <div class="logo-section">
+                <div class="logo">
+                    <span>GREYSON</span>
+                    <span class="logo-accent">▸</span>
+                    <span>BARMAK</span>
+                </div>
+                <div class="tagline">CIS • Business Management • JMU '27</div>
             </div>
             <div class="contact-info">
                 <span>📍 Leesburg, VA</span>
